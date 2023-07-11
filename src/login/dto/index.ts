@@ -1,19 +1,17 @@
-import { IsEmail, IsNotEmpty, IsString, IsNumber } from "class-validator";
+import { IsEmail, IsNotEmpty, IsString } from "class-validator";
 
-export default class LoginDTO{
-    @IsString()
-     readonly username : string;
+export default class LoginDTO {
+  @IsString()
+  @IsNotEmpty()
+  readonly username: string;
 
-    @IsString()
-     readonly password : string;
+  @IsString()
+  @IsNotEmpty()
+  readonly password: string;
 
-    @IsString()
-     readonly status : string;
-     
-    @IsNumber()
-    readonly  id: number;
-
-
+  @IsString()
+  readonly status: string;
+}
 
 /* @IsEmail()
     private email : string;
@@ -23,4 +21,3 @@ export default class LoginDTO{
 
 
 
-}

@@ -11,11 +11,17 @@ export class LoginService {
     }
   }
 
-  public async updateLoginService(data: LoginDTO) {
+  public async updateLoginService(id: number, data: LoginDTO) {
+    if (true) {
+      return await this.LoginModel.updateUser(id, data);
+    }
+  }
+
+  /*public async updateLoginService(data: LoginDTO) {
     if (true) {
       return await this.LoginModel.updateUser(data);
     }
-  }
+  }*/
 
   public async getUserService() {
     if (true) {
@@ -23,7 +29,7 @@ export class LoginService {
     }
   }
   
-  public async deleteLoginService(id: number) {
+  public async deleteLoginService(id:number) {
     if (true) {
       return await this.LoginModel.deleteUser(id);
     }
