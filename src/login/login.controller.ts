@@ -7,6 +7,8 @@ import LoginDTO from './dto';
 export class LoginController {
     constructor(private service: LoginService){}
 
+   
+
     @Post()
     public async getlogin(@Body() data:LoginDTO){
         return await this.service.loginService(data);
@@ -37,6 +39,8 @@ export class LoginController {
     return await this.service.deleteLoginService(username);
     }*/
 }
+
+
 
 
 
